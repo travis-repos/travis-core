@@ -1,6 +1,5 @@
 language: ruby
 rvm:
-  - 1.9.3
   - jruby-18mode
   - jruby-19mode
 jdk:
@@ -12,6 +11,9 @@ matrix:
   allow_failures:
     - rvm: jruby-head
   include:
+    - rvm: 1.9.3
+      env: ''
+      jdk: ''
     - rvm: jruby-head
       env: JRUBY_OPTS="--server -Xcext.enabled=false -Xcompile.invokedynamic=false --1.9"
     - rvm: jruby-head
